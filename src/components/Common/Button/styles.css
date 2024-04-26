@@ -4,4 +4,8 @@
   border-radius: 3rem;
   padding: 0.5rem 1.5rem;
   font-weight: 600;
+  text-align: center;
+  min-width: 90px;
+  text-transform: capitalize;
+  cursor: pointer;
 }

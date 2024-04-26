@@ -2,38 +2,39 @@ import TemporaryDrawer from "./drawer";
 import SpeedRoundedIcon from "@mui/icons-material/SpeedRounded";
 import "./styles.css";
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <nav className="navbar">
         <div className="logo-links">
-          <a href="/" className="logo-a">
+          <Link to="/" className="logo-a">
             <SpeedRoundedIcon />
             <h1 className="logo">CryptoMeter</h1>
-          </a>
+          </Link>
           <div className="links">
-            <a href="/">
+            <Link to="/">
               <p className="link">Home</p>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/">
               <p className="link">Compare</p>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/">
               <p className="link">Watchlist</p>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/">
               <p className="link">Contact Us</p>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="login-links">
-          <a href="/">
+          <Link to="/dashboard">
             <Button text={"Dashboard"} />
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/">
             <p className="link">Sign up</p>
-          </a>
+          </Link>
         </div>
         <div className="mobile-drawer">
           <TemporaryDrawer />
