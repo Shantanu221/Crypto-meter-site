@@ -17,8 +17,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   background-color: var(--black);
-
   overflow-x: hidden;
+  color: var(--white);
 }
 
 ::selection {
@@ -44,4 +44,12 @@ body {
 a {
   color: var(--white) !important;
   text-decoration: none !important;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
