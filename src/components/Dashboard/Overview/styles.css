@@ -1,0 +1,40 @@
+.live-crypto-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.live-label-1 {
+  font-size: 2.5rem;
+  margin-top: 1.3rem;
+  margin-bottom: 0;
+}
+
+.live-label-2 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  color: rgb(194, 194, 194);
+}
+
+.live-overview-data {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.price-live {
+  color: #f7cc34;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    #a634f7 39%,
+    #077983 86%,
+    #016695 1%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}

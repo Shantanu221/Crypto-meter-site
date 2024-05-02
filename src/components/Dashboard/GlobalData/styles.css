@@ -1,0 +1,52 @@
+.overview-data-box {
+  height: 210px;
+  width: 320px;
+  background-color: var(--darkgrey);
+  border-radius: 10px;
+}
+
+.overview-data-heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.7rem;
+  background-color: rgb(49, 49, 49);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: 500;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.overview-data-heading p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.data-element {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  align-items: center;
+}
+
+.element-info {
+  font-weight: 400;
+  color: rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+.element-info-value {
+  font-weight: 500;
+}
+
+.market-cap-change {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.red-market-cap {
+  color: var(--red);
+}

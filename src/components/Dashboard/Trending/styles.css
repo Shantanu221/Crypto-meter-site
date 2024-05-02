@@ -1,0 +1,21 @@
+.logo-image-class {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-image-class img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 6px;
+}
+
+.element-crypto-price {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.trending-crypto-name{
+  color: rgb(192, 192, 192);
+}

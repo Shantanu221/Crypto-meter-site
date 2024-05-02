@@ -2,6 +2,7 @@ import "./styles.css";
 import iphone from "../../../assets/iphone.png";
 import gradient from "../../../assets/gradient.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function MainComponent() {
   return (
@@ -24,7 +25,9 @@ function MainComponent() {
           Real Time.
         </motion.h1>
         <p className="info-text">lorem ipsum eed 3r 3cefe fess gsgggg</p>
-        <Button2 text={"Start Tracking"} />
+        <Link to="/dashboard">
+          <Button2 text={"Start Tracking"} />
+        </Link>
       </div>
       <div className="right-component">
         <motion.img

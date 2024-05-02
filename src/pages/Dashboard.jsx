@@ -1,26 +1,94 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Common/Header";
 import TabsComponent from "../components/Dashboard/Tabs";
-import axios from "axios";
+// import axios from "axios";
+import Overview from "../components/Dashboard/Overview";
+import Search from "../components/Dashboard/Search";
+import PaginationControlled from "../components/Dashboard/Pagination";
 
 function DashboardPage() {
   const [coins, setCoins] = useState([]);
+  const [paginatedCoins, setPaginatedCoins] = useState([]);
+  const [overview, setOverview] = useState([]);
+  const [trending, setTrending] = useState([]);
+  const [companies, setCompanies] = useState([]);
+  const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
+
+  const handlePageChange = (event, value) => {
+    setPage(value);
+    let previousIndex = (value - 1) * 10;
+    setPaginatedCoins(coins.slice(previousIndex, previousIndex + 10));
+  };
+
+  function onSearchChange(e) {
+    setSearch(e.target.value);
+  }
+
+  let filterCoins = coins.filter(
+    (c) =>
+      c.name.toLowerCase().includes(search.toLowerCase()) ||
+      c.symbol.toLowerCase().includes(search.toLowerCase())
+  );
 
   useEffect(() => {
-    // const options = {
-    //   method: "GET",
-    //   url: "https://api.coingecko.com/api/v3/coins/markets",
-    //   params: { vs_currency: "usd", order: "market_cap_desc" },
-    //   headers: {
-    //     accept: "application/json",
-    //     "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
-    //   },
-    // };
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
+      },
+    };
 
-    // axios
-    //   .get(options)
-    //   .then((res) => console.log(res))
-    //   .catch((e) => console.log(e));
+    fetch("https://api.coingecko.com/api/v3/global", options)
+      .then((response) => response.json())
+      .then((response) => {
+        // console.log(response.data);
+        setOverview(response.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
+      },
+    };
+
+    fetch("https://api.coingecko.com/api/v3/search/trending", options)
+      .then((response) => response.json())
+      .then((response) => {
+        // console.log(response.coins);
+        setTrending(response.coins);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
+      },
+    };
+
+    fetch(
+      "https://api.coingecko.com/api/v3/companies/public_treasury/bitcoin",
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response.companies);
+        setCompanies(response.companies);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  useEffect(() => {
     const options = {
       method: "GET",
       headers: {
@@ -35,9 +103,10 @@ function DashboardPage() {
     )
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         setCoins(response);
-        console.log([...coins, ...response]);
+        setPaginatedCoins(response.slice(0, 10));
+        // console.log([...coins, ...response]);
       })
       .catch((err) => console.error(err));
   }, []);
@@ -45,7 +114,10 @@ function DashboardPage() {
   return (
     <div>
       <Header />
-      <TabsComponent coins={coins}/>
+      <Overview overview={overview} trending={trending} companies={companies} />
+      <Search search={search} onSearchChange={onSearchChange} />
+      <TabsComponent coins={search ? filterCoins : paginatedCoins} />
+      <PaginationControlled page={page} handlePageChange={handlePageChange} />
     </div>
   );
 }
