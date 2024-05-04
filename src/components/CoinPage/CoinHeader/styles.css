@@ -1,0 +1,50 @@
+.coin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5rem;
+  padding-right: 10rem;
+  /* border-bottom: 0.1ex solid grey; */
+}
+
+.coin-logo-name-symbol {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.coin-logo-name-symbol div {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.9rem;
+}
+
+.coin-header-logo {
+  height: 70px;
+  width: 70px;
+}
+
+.coin-header-coin-name {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.coin-header-coin-symbol {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: grey;
+}
+
+.coin-header-coin-price {
+  font-family: "Inter";
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.coin-header-coin-rank {
+  font-size: 1.5rem;
+  color: aquamarine;
+}

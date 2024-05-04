@@ -21,8 +21,11 @@
 
 .live-overview-data {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  gap: 1.7rem;
+  margin: 1.5rem 2rem;
 }
 
 .price-live {

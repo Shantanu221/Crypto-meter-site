@@ -21,6 +21,10 @@ body {
   color: var(--white);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   background-color: var(--blue);
   color: var(--white);
@@ -52,4 +56,15 @@ img {
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
+}
+
+.chart-wrapper {
+  background-color: var(--darkgrey);
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  border-radius: 1rem;
+  width: 85%;
+  height: 20rem;
+  display: block;
+  margin: 1.5rem auto;
 }

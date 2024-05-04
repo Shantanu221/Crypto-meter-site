@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./styles.css";
 import iphone from "../../../assets/iphone.png";
 import gradient from "../../../assets/gradient.png";

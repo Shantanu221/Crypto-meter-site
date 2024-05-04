@@ -5,6 +5,8 @@ import TabsComponent from "../components/Dashboard/Tabs";
 import Overview from "../components/Dashboard/Overview";
 import Search from "../components/Dashboard/Search";
 import PaginationControlled from "../components/Dashboard/Pagination";
+import Loader from "../components/Common/Loader";
+import BackToTop from "../components/Common/BackToTop";
 
 function DashboardPage() {
   const [coins, setCoins] = useState([]);
@@ -14,6 +16,7 @@ function DashboardPage() {
   const [companies, setCompanies] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handlePageChange = (event, value) => {
     setPage(value);
@@ -107,18 +110,36 @@ function DashboardPage() {
         setCoins(response);
         setPaginatedCoins(response.slice(0, 10));
         // console.log([...coins, ...response]);
+        setIsLoading(false);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err);
+        setIsLoading(false);
+      });
   }, []);
 
   return (
-    <div>
+    <>
       <Header />
-      <Overview overview={overview} trending={trending} companies={companies} />
-      <Search search={search} onSearchChange={onSearchChange} />
-      <TabsComponent coins={search ? filterCoins : paginatedCoins} />
-      <PaginationControlled page={page} handlePageChange={handlePageChange} />
-    </div>
+      <BackToTop />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div>
+          <Overview
+            overview={overview}
+            trending={trending}
+            companies={companies}
+          />
+          <Search search={search} onSearchChange={onSearchChange} />
+          <TabsComponent coins={search ? filterCoins : paginatedCoins} />
+          <PaginationControlled
+            page={page}
+            handlePageChange={handlePageChange}
+          />
+        </div>
+      )}
+    </>
   );
 }
 
