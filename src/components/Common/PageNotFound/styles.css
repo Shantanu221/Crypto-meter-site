@@ -1,0 +1,14 @@
+.page-not-found-error {
+  height: 12rem;
+}
+
+.page-not-found {
+  margin-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+}

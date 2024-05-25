@@ -45,7 +45,7 @@ function CoinPage() {
     if (id) {
       getData();
     }
-  }, [id]);
+  }, []);
 
   async function getData() {
     const data = await getCoinData(id);
