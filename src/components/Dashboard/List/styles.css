@@ -75,3 +75,9 @@
     display: block;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .market-cap-responsive {
+    display: none;
+  }
+}

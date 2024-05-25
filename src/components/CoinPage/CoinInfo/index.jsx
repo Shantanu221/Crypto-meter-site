@@ -23,7 +23,7 @@ function CoinInfo({ data }) {
             </div>
             {data?.links.homepage[0] ? (
               <a href={data?.links.homepage[0]}>
-                {data?.links.homepage[0].slice(8)}
+                {data?.links.homepage[0].slice(8, 20)}...
               </a>
             ) : (
               <p style={{ margin: 0 }}>--</p>

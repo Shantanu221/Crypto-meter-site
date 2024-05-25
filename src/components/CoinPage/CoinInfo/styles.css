@@ -66,3 +66,12 @@
     margin-top: 2rem;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .about-div div {
+    padding-right: 1.6rem;
+  }
+  .website-and-whitepaper a {
+    font-size: 1rem;
+  }
+}
