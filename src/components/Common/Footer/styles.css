@@ -64,3 +64,9 @@
     margin-top: 440px;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .footer-logo {
+    font-size: 1rem !important;
+  }
+}

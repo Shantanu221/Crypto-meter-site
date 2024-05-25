@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import Header from "../components/Common/Header";
 import TabsComponent from "../components/Dashboard/Tabs";
@@ -7,7 +8,6 @@ import Search from "../components/Dashboard/Search";
 import PaginationControlled from "../components/Dashboard/Pagination";
 import Loader from "../components/Common/Loader";
 import BackToTop from "../components/Common/BackToTop";
-import Footer from "../components/Common/Footer";
 
 function DashboardPage() {
   const [coins, setCoins] = useState([]);
