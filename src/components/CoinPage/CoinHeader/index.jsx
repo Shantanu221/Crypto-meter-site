@@ -8,10 +8,10 @@ function CoinHeader({ image, name, symbol, price, rank }) {
         <img src={image} alt="image" className="coin-header-logo" />
         <div>
           <p className="coin-header-coin-name">{name}</p>
-          <p className="coin-header-coin-symbol">{symbol.toUpperCase()}</p>
+          <p className="coin-header-coin-symbol">{symbol?.toUpperCase()}</p>
         </div>
       </div>
-      <p className="coin-header-coin-price">${price.toLocaleString()}</p>
+      <p className="coin-header-coin-price">${price?.toLocaleString()}</p>
       <p className="coin-header-coin-rank">Market Cap rank : {rank}</p>
     </div>
   );

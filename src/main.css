@@ -19,6 +19,7 @@ body {
   background-color: var(--black);
   overflow-x: hidden;
   color: var(--white);
+  font-feature-settings: "0", "ss01";
 }
 
 html {
@@ -64,6 +65,9 @@ img {
   padding-bottom: 0.5rem;
   border-radius: 1rem;
   width: 85%;
+  margin-left: 5rem !important;
+  margin-right: 10rem !important;
+  /* margin-left: 100px; */
   height: 20rem;
   display: block;
   margin: 1.5rem auto;

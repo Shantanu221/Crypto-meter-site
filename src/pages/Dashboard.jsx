@@ -34,14 +34,22 @@ function DashboardPage() {
       c.symbol.toLowerCase().includes(search.toLowerCase())
   );
 
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
+    },
+  };
+
   useEffect(() => {
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
-      },
-    };
+    // const options = {
+    //   method: "GET",
+    //   headers: {
+    //     accept: "application/json",
+    //     "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
+    //   },
+    // };
 
     fetch("https://api.coingecko.com/api/v3/global", options)
       .then((response) => response.json())
@@ -53,13 +61,13 @@ function DashboardPage() {
   }, []);
 
   useEffect(() => {
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
-      },
-    };
+    // const options = {
+    //   method: "GET",
+    //   headers: {
+    //     accept: "application/json",
+    //     "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
+    //   },
+    // };
 
     fetch("https://api.coingecko.com/api/v3/search/trending", options)
       .then((response) => response.json())
@@ -71,34 +79,26 @@ function DashboardPage() {
   }, []);
 
   useEffect(() => {
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
-      },
-    };
-
     fetch(
       "https://api.coingecko.com/api/v3/companies/public_treasury/bitcoin",
       options
     )
       .then((response) => response.json())
       .then((response) => {
-        console.log(response.companies);
+        // console.log(response.companies);
         setCompanies(response.companies);
       })
       .catch((err) => console.error(err));
   }, []);
 
   useEffect(() => {
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
-      },
-    };
+    // const options = {
+    //   method: "GET",
+    //   headers: {
+    //     accept: "application/json",
+    //     "x-cg-demo-api-key": "CG-LtKkFVa2LQMqW8PFNtCXPMBw",
+    //   },
+    // };
 
     fetch(
       "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc",
@@ -125,7 +125,7 @@ function DashboardPage() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div>
+        <div style={{ paddingBottom: "3px" }}>
           <Overview
             overview={overview}
             trending={trending}
