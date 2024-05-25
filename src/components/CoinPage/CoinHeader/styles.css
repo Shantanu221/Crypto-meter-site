@@ -83,3 +83,23 @@
     justify-content: space-around;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .coin-header {
+    padding-left: 1rem;
+    padding-right: 0.8rem;
+  }
+
+  .coin-logo-name-symbol div {
+    gap: 0.5rem;
+    align-items: center;
+    margin-right: 0.6rem;
+  }
+
+  .coin-header-coin-name {
+    font-size: 1.3rem;
+  }
+  .coin-header-coin-symbol {
+    font-size: 0.8rem;
+  }
+}
