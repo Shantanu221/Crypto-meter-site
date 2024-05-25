@@ -59,3 +59,12 @@
 .value-green {
   color: rgb(56, 182, 56);
 }
+
+@media only screen and (max-width: 900px) {
+  .market-info-container {
+    margin: 0;
+    margin-left: 48px;
+    margin-right: 38px;
+    padding-right: 0.5rem;
+  }
+}

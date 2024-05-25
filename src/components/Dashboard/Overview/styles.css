@@ -41,3 +41,12 @@
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
+@media only screen and (max-width: 800px) {
+  .live-label-1 {
+    font-size: 2rem;
+  }
+  .live-label-2 {
+    font-size: 1.1rem;
+  }
+}

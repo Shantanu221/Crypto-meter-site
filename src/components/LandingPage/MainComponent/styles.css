@@ -61,6 +61,10 @@
   padding: 1rem;
 }
 
+.left-component {
+  margin-top: 110px;
+}
+
 .iphone {
   position: absolute;
   z-index: 10;
@@ -111,6 +115,7 @@
   }
   .left-component {
     text-align: center;
+    margin-top: 30px;
   }
   .iphone {
     left: 10%;
@@ -120,7 +125,7 @@
   }
   .crypto-meter-heading,
   .real-time-heading {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: "Noto Sans";
     font-weight: 700;
     margin: 0;

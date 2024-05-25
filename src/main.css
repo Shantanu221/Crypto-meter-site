@@ -64,11 +64,20 @@ img {
   padding: 1rem;
   padding-bottom: 0.5rem;
   border-radius: 1rem;
-  width: 85%;
+  /* width: 85%; */
   margin-left: 5rem !important;
   margin-right: 10rem !important;
   /* margin-left: 100px; */
   height: 20rem;
   display: block;
   margin: 1.5rem auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .chart-wrapper {
+    /* margin: 0 !important; */
+    margin-left: 48px !important;
+    margin-right: 38px !important;
+    margin-bottom: 2rem !important;
+  }
 }

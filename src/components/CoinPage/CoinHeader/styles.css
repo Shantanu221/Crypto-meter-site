@@ -48,3 +48,38 @@
   font-size: 1.5rem;
   color: aquamarine;
 }
+
+@media only screen and (max-width: 950px) {
+  .coin-header-logo {
+    height: 50px;
+    width: 50px;
+  }
+  .coin-header-coin-name {
+    font-size: 1.8rem;
+  }
+  .coin-header-coin-symbol {
+    font-size: 1.3rem;
+  }
+  .coin-header-coin-price {
+    font-size: 1.6rem;
+  }
+  .coin-header-coin-rank {
+    font-size: 1.2rem;
+  }
+  .coin-header {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  .coin-logo-name-symbol {
+    gap: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .coin-header-coin-rank {
+    display: none;
+  }
+  .coin-header {
+    justify-content: space-around;
+  }
+}

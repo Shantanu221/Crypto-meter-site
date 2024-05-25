@@ -25,7 +25,7 @@ function MainComponent() {
         >
           Real Time.
         </motion.h1>
-        <p className="info-text">lorem ipsum eed 3r 3cefe fess gsgggg</p>
+        <p className="info-text">Track crypto prices live and vizualise charts.</p>
         <Link to="/dashboard">
           <Button2 text={"Start Tracking"} />
         </Link>

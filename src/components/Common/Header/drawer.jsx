@@ -23,7 +23,7 @@ export default function TemporaryDrawer() {
           <Link to="/">
             <p className="link">Watchlist</p>
           </Link>
-          <Link to="/">
+          <Link to="/dashboard">
             <p className="link">Dashboard</p>
           </Link>
           <Link to="/">
