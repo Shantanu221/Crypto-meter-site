@@ -74,10 +74,10 @@ To get a local copy up and running follow these simple example steps.
 
 _Follow the steps give below to run it  on your machine._
 
-1. Get a API Key at [CoinGecko.com]([https://example.com](https://www.coingecko.com/))
+1. Get a API Key at [CoinGecko.com](https://www.coingecko.com/)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Shantanu221/Crypto-meter-site
    ```
 3. Install NPM packages
    ```sh
@@ -95,9 +95,6 @@ _Follow the steps give below to run it  on your machine._
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
