@@ -94,7 +94,13 @@ _Follow the steps give below to run it  on your machine._
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+- Helps user to track real time prices of top 180 cryptocurrencies worldwide
+- User can search their cryptocurrency by name or symbol
+- Different view modes
+- Deatiled information about market statistics of each cryptocurrency
 
+
+![](https://github.com/Shantanu221/Crypto-meter-site/blob/main/Docs/site_rec.gif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,23 +109,12 @@ _Follow the steps give below to run it  on your machine._
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+- [x] Add deatiled market stats of each cryptocurrency
+- [ ] Add save to favourites coin section
+- [ ] Add compare page to compare two cryptocurrencies
+- [ ] Different currency and language support
+    - [x] USD
+    - [ ] IND
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,9 +123,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - Shantanu - shantanu.ingale22@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [crypto-tracker.netlify.app](https://github.com/Shantanu221/Crypto-meter-site)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
